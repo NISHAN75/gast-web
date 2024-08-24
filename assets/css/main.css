@@ -525,10 +525,15 @@ textarea {
   font-size: 16px;
 }
 .application-img-area {
-  margin-left: 193px;
+  max-width: 1120px;
+  margin-right: 0;
+  margin-left: auto;
 }
-.application-img-area .row{
-  --bs-gutter-x: 16px;
+.application-img-wrapper.small-img-wrapper {
+  min-width: calc(100% - 613px);
+}
+.application-img-inner-wrapper {
+  gap: 16px;
 }
 .big-img-wrapper .application-img:last-child img{
   height: 340px;
@@ -544,7 +549,7 @@ textarea {
   letter-spacing: 11.04px;
   position: absolute;
   top: -88px;
-  left: 0;
+  left: -110px;
   z-index: 4;
   writing-mode: tb-rl;
   transform: rotate(180deg);
@@ -562,7 +567,7 @@ textarea {
   top: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.05;
   background-color: #242424;
   mix-blend-mode: luminosity;
   z-index: -1;

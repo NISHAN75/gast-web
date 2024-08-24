@@ -29,7 +29,38 @@ body {
 	font-family: 'Metropolis', sans-serif;
 	color: #000;
 }
+body {
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: "Manrope", sans-serif;
+	color: #231F20;
+}
+html.lenis, html.lenis body {
+  height: auto;
+}
 
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+main{
+  position: relative;
+  z-index: 9;
+  background-color: #fff;
+  overflow-x: hidden;
+}
 /* default css start */
 a {
 	text-decoration: none;
@@ -52,10 +83,15 @@ img {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
+.animate-line{
+  overflow: hidden;
+}
 /* container */
 .container {
 	max-width: 1220px;
+}
+.container-xl{
+  max-width: 1336px;
 }
 /* heading  style*/
 h1,
@@ -157,7 +193,7 @@ textarea {
   height: 100%;
   width: 100%;
   z-index: 2;
-  transition: all 0.3s linear;
+  transition: none;
 }
 .video-btn::before {
   background-color: transparent;
@@ -290,13 +326,34 @@ textarea {
   z-index: -1;
   clip-path: polygon(100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px, 10px 0);
 }
+.gast-btn-2.version-2:hover{
+  color: #fff;
+}
 .gast-btn-2.version-2:hover::before{
     background: #484F56;
 }
 /* all button */
 
 
-
+/* header section start */
+.header-area {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.header-content-info {
+  padding: 29px 0;
+  max-width: 752px;
+  margin-right: 0;
+  margin-left: auto;
+  justify-content: space-between;
+}
+.logo img {
+  max-width: 192px;
+}
+/* header section end */
 
 
 
@@ -304,7 +361,6 @@ textarea {
 
 /* banner section start */
 .banner-area {
-  overflow-x: hidden;
   padding-top: 198px;
 }
 .banner-area .container {
@@ -323,7 +379,7 @@ textarea {
 
 .text-stroke {
   display: inline-block;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #94C947;
   font-size: 300px;
   font-weight: 700;
@@ -335,16 +391,17 @@ textarea {
 }
 .banner-area .text-stroke {
   position: absolute;
-  top: 0;
-  left: -60px;
+  top: -170px;
+  left: -28px;
   z-index: 4;
   writing-mode: tb-rl;
 }
+
 .banner-area .text-stroke.banner-text-stroke-2 {
   left: auto;
-  right: -60px;
+  right: -33px;
   transform: rotate(180deg);
-  top: 135px;
+  top: -170px;
 }
 .banner-area:before, .banner-area:after {
   position: absolute;
@@ -407,6 +464,10 @@ textarea {
 }
 .banner-img-wrapper {
   gap: 128px;
+  margin-top: 100px;
+}
+.banner-img-1.parallax-img {
+  height: calc(100% + 100px);
 }
 
 /* banner section end */
@@ -541,6 +602,29 @@ textarea {
 .applications-area {
   background-color: #414446;
   padding: 113px 0;
+  clip-path: polygon(calc(50% - 430px ) 0, calc(50% - 380px) 50px, 100% 50px, 100% 100%, calc(50% + 430px) 100%, calc(50% + 380px) calc(100% - 50px), 0 calc(100% - 48px), 0 0);
+}
+.applications-area::after ,
+.applications-area::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  height: 94px;
+  width: calc(50% - 386px);
+  border-top: 2px solid #94C949;
+  border-right: 3px solid #94C949;
+  left: 0;
+  transform: skewX(45deg);
+  z-index: 1;
+}
+.applications-area::after {
+  transform: skewX(45deg) rotate(180deg);
+  top: auto;
+  left: auto;
+  right: 0px;
+  bottom: 20px;
+  height: 79px;
+  width: calc(50% - 401px);
 }
 .applications-area .text-stroke {
   -webkit-text-stroke-color: #888;
@@ -560,6 +644,7 @@ textarea {
 .interested-area {
   background-color: #242424;
   padding: 130px 0 67px;
+  margin-top: -51px;
 }
 .interested-bg {
   position: absolute;
@@ -578,7 +663,7 @@ textarea {
   letter-spacing: 12px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1155px;
+  text-align: center;
   display: block;
   z-index: 2;
   position: relative;
@@ -674,9 +759,24 @@ textarea {
 }
 .contact-form-info {
   margin-bottom: 16px;
+  max-width: 492px;
 }
 
 
 
 /* contact section end */
 
+/* footer section start */
+.footer-area {
+  padding: 12px 0;
+  background: #fff;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 8;
+}
+
+.footer-logo img {
+  max-width: 192px;
+}
+/* footer section end */

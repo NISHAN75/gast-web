@@ -14,11 +14,10 @@
         font-size: 200px;
     }
     .banner-area .text-stroke {
-        left: -36px;
-        bottom: 5px;
+        left: -19px;
     }
     .banner-area .text-stroke.banner-text-stroke-2 {
-        right: -38px;
+        right: -20px;
     }
     .banner-area {
         padding-top: 130px;
@@ -112,11 +111,10 @@
         font-size: 100px;
     }
     .banner-area .text-stroke {
-        left: -20px;
-        bottom: 8px;
+        left: -7px;
     }
     .banner-area .text-stroke.banner-text-stroke-2 {
-        right: -18px;
+        right: -6px;
     }
     
     .banner-content-info h1 {
@@ -226,9 +224,15 @@
     }
     .banner-img-wrapper {
         gap: 50px;
+        margin-top: 0;
     }
     .banner-area {
         padding-top: 100px;
+        margin-bottom: 50px;
+    }
+    .bg-shape ,
+    .banner-area:before, .banner-area:after {
+        clip-path: polygon(100% 0, 100% calc(100% - 35px), calc(50% + 25px) calc(100% - 35px), calc(50% - 25px) 100%, 0 100%, 0 0);
     }
     /* banner section end */
 
